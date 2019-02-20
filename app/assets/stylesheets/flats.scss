@@ -1,0 +1,123 @@
+// Place all the styles related to the flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,700');
+
+$primary: #2ca58d;
+$primary-light: #84bc9c;
+$secondary: #f46197;
+$black: #0a2342;
+$white: #fffdf7;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  margin: 0;
+  font-weight: 100;
+}
+
+.wrapper {
+  &--primary {
+    background: linear-gradient(145deg, rgba($black, 0.7), rgba($primary, 0.4)),
+      url('header.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.align-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-white {
+  color: $white;
+}
+
+.card {
+  position: relative;
+  margin: 1.5rem 1rem;
+  flex: 0 0 30%;
+  min-width: 28rem;
+  box-shadow: 0 2px 8px rgba(113, 113, 113, 0.426);
+  &__header {
+    background: $primary;
+    color: $white;
+    height: 8rem;
+  }
+  &__body {
+    padding: 1rem;
+    height: 120px;
+  }
+  &__address {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  &__description {
+    line-height: 2rem;
+  }
+  &__price {
+    top: -15px;
+    left: 15px;
+  }
+  &__guests {
+    top: -15px;
+    right: 15px;
+  }
+  &__price,
+  &__guests {
+    position: absolute;
+    font-size: 1.4rem;
+    border-radius: 50%;
+    background: $secondary;
+    color: #fff;
+    width: 4rem;
+    height: 4rem;
+    box-shadow: 0 2px 8px rgba($black, 0.8);
+  }
+  &__footer {
+    padding: 10px 0;
+  }
+  &__footer .btn {
+    display: block;
+    width: 100%;
+    height: ;
+  }
+}

@@ -1,0 +1,37 @@
+<div class="wrapper--primary">
+  <div class="container align-center text-white">
+    <h1 class="title">Check out our Flats</h1>
+    <h3 class="subtitle">The best places to live in Tokyo</h3>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row">
+     <% @flats.each do |flat| %>
+      <div class="card">
+        <div class="card__header center-content">
+          <h4 class="card__title ">
+            <%= flat.name %>
+          </h4>
+        </div>
+        <div class="card__body">
+          <div class="card__address">
+             <%= flat.address %>
+          </div>
+          <div class="card__description">
+            <%= flat.description %>
+          </div>
+        </div>
+        <div class="card__guests center-content">
+          <%= flat.number_of_guest %>
+        </div>
+        <div class="card__price center-content">
+          $<%= flat.price_per_night %>
+        </div>
+        <div class="card__footer">
+          <%= button_to 'More Info', flat_path(flat), class: "btn", method: "get" %>
+        </div>
+      </div>
+     <% end %>
+    </div>
+</div>
