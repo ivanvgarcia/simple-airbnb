@@ -30,6 +30,10 @@ h5 {
   font-weight: 100;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   &--primary {
     background: linear-gradient(145deg, rgba($black, 0.7), rgba($primary, 0.4)),
@@ -38,13 +42,14 @@ h5 {
     background-repeat: no-repeat;
     background-size: cover;
     height: 50vh;
+    -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
   }
 }
 
 .container {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 1rem;
+  padding: 4rem;
 }
 
 .row {
@@ -77,6 +82,7 @@ h5 {
   flex: 0 0 30%;
   min-width: 28rem;
   box-shadow: 0 2px 8px rgba(113, 113, 113, 0.426);
+
   &__header {
     background: $primary;
     color: $white;
@@ -113,11 +119,17 @@ h5 {
     box-shadow: 0 2px 8px rgba($black, 0.8);
   }
   &__footer {
-    padding: 10px 0;
+    height: 3rem;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
   }
   &__footer .btn {
-    display: block;
     width: 100%;
-    height: ;
   }
+}
+
+.btn {
+  background: $secondary;
+  color: $white;
 }
